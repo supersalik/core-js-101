@@ -470,13 +470,13 @@ function sortCitiesArray(arr) {
  *           [0,0,0,1,0],
  *           [0,0,0,0,1]]
  */
-function getIdentityMatrix(/* n */) {
-  throw new Error('Not implemented');
-  // const arr = Array.from({ length: n }, (_, i) =>
-  //   Array.from({ length: n }, (_, j) => (i === j ? 1 : 0))
-  // );
-  // return arr;
-}
+function getIdentityMatrix(n) {}
+//   // throw new Error('Not implemented');
+//   const arr = Array.from({ length: n }, (_, i) =>
+//     Array.from({ length: n }, (_, j) => (i === j ? 1 : 0))
+//   );
+//   return arr;
+// }
 
 /**
  * Creates an array of integers from the specified start to end (inclusive)
@@ -491,8 +491,12 @@ function getIdentityMatrix(/* n */) {
  *     0, 100 => [ 0, 1, 2, ..., 100 ]
  *     3, 3   => [ 3 ]
  */
-function getIntervalArray(/* start, end */) {
-  throw new Error('Not implemented');
+function getIntervalArray(start, end) {
+  const array = [];
+  for (let i = start; i <= end; i += 1) {
+    array.push(i);
+  }
+  return array;
 }
 
 /**
