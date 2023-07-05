@@ -477,12 +477,6 @@ function getIdentityMatrix(n) {
   return arr3;
 }
 
-//   const arr = Array.from({ length: n }, (_, i) =>
-//     Array.from({ length: n }, (_, j) => (i === j ? 1 : 0))
-//   );
-//   return arr;
-// }
-
 /**
  * Creates an array of integers from the specified start to end (inclusive)
  *
@@ -515,8 +509,10 @@ function getIntervalArray(start, end) {
  *   [ 'a', 'a', 'a', 'a' ]  => [ 'a' ]
  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
  */
-function distinct(/* arr */) {
-  throw new Error('Not implemented');
+function distinct(arr) {
+  const mySet = new Set();
+  const trueArr = arr.map((x) => mySet.add(x));
+  return Array.from(trueArr[0]);
 }
 
 /**
